@@ -11,17 +11,42 @@
           <img src="img/logo.svg" width="288" height="28" alt="Логотип интернет-магазина мороженного Глейси">
         </a>
         <ul>
-          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="catalog.html">Каталог</a>
+            <ul class="submenu">
+              <li><a class="new" href="">Новинки</a></li>
+              <li><a href="">Сливочное</a></li>
+              <li><a href="">Щербеты</a></li>
+              <li><a href="">Фруктовый лед</a></li>
+              <li><a href="">Мелорин</a></li>
+            </ul>
+          </li>
           <li><a href="#">Доставка и оплата</a></li>
           <li><a href="#">О компании</a></li>
         </ul>
       </nav>
       <section class="interaction-header">
         <button class="search" type="button">
-          <!--тут будет форма поиска-->
+          <form method="get" action="https://echo.htmlacademy.ru">
+            <label class="visually-hidden" for="searching">Введите поисковый запрос</label>
+            <input id="searching" type="text" name="login" placeholder="Крем брюле">
+          </form>
         </button>
         <button class="input" type="button">
-          <!--тут будет форма входа на сайт-->
+          <form method="get" action="https://echo.htmlacademy.ru">
+            <p>
+              <label class="visually-hidden" for="user-login">Логин</label>
+              <input id="user-login" type="text" name="login" placeholder="email@example.com">
+            </p>
+            <p>
+              <label class="visually-hidden" for="user-password">Пароль</label>
+              <input id="user-password" type="text" name="password" placeholder="********">
+            </p>
+            <button type="submit">Войти</button>
+            <p>
+              <a href="">Забыли пароль?</a>
+              <a href="">Новая регистрация</a>
+            </p>
+          </form>
         </button>
         <button class="" type="button">
           <!--тут будет корзина-->
@@ -156,5 +181,21 @@
       <a href="img/logo-htmlacademy-small.svg"></a>
       <a href="https://htmlacademy.ru">Сделано в HTML Academy © 2019</a>
   	</footer>
+    <section class="back-communication">
+      <button aria-label="Закрыть форму обратной связи">х</button>
+      <form method="get" action="https://echo.htmlacademy.ru">
+        <p>
+          <label class="visually-hidden" for="your-name">Ваше имя и фамилия</label>
+          <input id="your-name" type="text" name="user-name" placeholder="Имя Фамилия">
+        </p>
+        <p>
+          <label class="visually-hidden" for="your-email">Адрес электронной почты</label>
+          <input id="your-email" type="text" name="user-email" placeholder="email@example.com">
+        </p>
+        <textarea placeholder="В свободной форме">
+        </textarea>
+        <button type="submit">Отправить</button>
+      </form>
+    </section>
   </body>
 </html>

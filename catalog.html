@@ -5,34 +5,80 @@
 	<title>Каталог товаров магазин глейси</title>
 </head>
 <body>
-	<header>
+    <header>
       <nav>
-        <a href="index.html">
+        <a href="#">
           <img src="img/logo.svg" width="288" height="28" alt="Логотип интернет-магазина мороженного Глейси">
         </a>
         <ul>
-          <li><a class="active" href="catalog.html">Каталог</a></li>
+          <li><a href="catalog.html">Каталог</a>
+            <ul class="submenu">
+              <li><a class="new" href="">Новинки</a></li>
+              <li><a href="">Сливочное</a></li>
+              <li><a href="">Щербеты</a></li>
+              <li><a href="">Фруктовый лед</a></li>
+              <li><a href="">Мелорин</a></li>
+            </ul>
+          </li>
           <li><a href="#">Доставка и оплата</a></li>
           <li><a href="#">О компании</a></li>
         </ul>
       </nav>
       <section class="interaction-header">
         <button class="search" type="button">
-          <!--тут будет форма поиска-->
+          <form method="get" action="https://echo.htmlacademy.ru">
+            <label class="visually-hidden" for="searching">Введите поисковый запрос</label>
+            <input id="searching" type="text" name="login" placeholder="Крем брюле">
+          </form>
         </button>
         <button class="input" type="button">
-          <!--тут будет форма входа на сайт-->
+          <form method="get" action="https://echo.htmlacademy.ru">
+            <p>
+              <label class="visually-hidden" for="user-login">Логин</label>
+              <input id="user-login" type="text" name="login" placeholder="email@example.com">
+            </p>
+            <p>
+              <label class="visually-hidden" for="user-password">Пароль</label>
+              <input id="user-password" type="text" name="password" placeholder="********">
+            </p>
+            <button type="submit">Войти</button>
+            <p>
+              <a href="">Забыли пароль?</a>
+              <a href="">Новая регистрация</a>
+            </p>
+          </form>
         </button>
-        <button class="" type="button">
-          <!--тут будет корзина-->
+        <button class="product-item" type="button">
+          <img src="">
+          <p>2 товара</p>
+          <section>
+            <ul>
+              <li>
+                <button aria-label="Удалить товар из корзины">x</button>
+                <img src="img/ice-cream1.png" width="33" height="33">
+                <p class="product-name">Пломбир с апельсиновым джемом</p>
+                <p class="product-quantity">1,5 кг х <span>200 руб.</span></p>
+                <p class="product-price">300 руб.</span></p>
+              </li>
+              <li>
+                <button aria-label="Удалить товар из корзины">x</button>
+                <img src="img/ice-cream3.png" width="33" height="33">
+                <p class="product-name">Клубничный пломбир с присыпкой из белого шоколада</p>
+                <p class="product-quantity">1,5 кг х <span>300 руб.</span></p>
+                <p class="product-price">450 руб.</span></p>
+              </li>
+            </ul>
+            <p>Итого: 750 руб.</p>
+            <button type="submit">Оформить заказ</button>
+          </section>
         </button>
       </section>
       <section class="working-time_phone">
         <p class="working-time">С 10 до 20, ежедневно</p>
         <p class="phone">8 812 450-25-25</p>
       </section>
-  	</header>
-  	<main>
+    </header>
+    <main>
   		<h1>Сливочное мороженное</h1>
   		<ul class="bread-crumbs">
   			<li><a href="index.html">Главная</a></li>
@@ -41,7 +87,68 @@
   		</ul>
   		<section class="filters">
   			<h2>Фильтр для подбора продукции</h2>
-  			<!--Тут будут фильтры продукции-->
+  			<form method="get" action="https://echo.htmlacademy.ru">
+          <p>
+            <label for="products-sort"></label>
+            <select id="products-sort">
+              <option>со популярности</option>
+              <option>сначала недорогие</option>
+              <option>сначала дорогие</option>
+              <option>по жирности</option>
+            </select>
+          </p>
+          <p>
+            <label for="product-price">Цена: 100 руб. - 500 руб.</label>
+            <!--Блок с бегунками на сортировку по цене-->
+          </p>
+            <fieldset>
+              <legend>Жирность:</legend>
+              <ul>
+                <li>
+                  <label for="fatness-0" aria-label="Жирность 0%">0%</label>
+                  <input id="fatness-0" type="radio" name="product-fatness">
+                </li>
+                <li>
+                  <label for="fatness-10" aria-label="Жирность  до 10%">до 10%</label>
+                  <input id="fatness-10" type="radio" name="product-fatness">
+                </li>
+                <li>
+                  <label for="fatness-30" aria-label="Жирность  до 30%">до 30%</label>
+                  <input id="fatness-30" type="radio" name="product-fatness">
+                </li>
+                <li>
+                  <label for="fatness-30+" aria-label="Жирность  выше 30%">выше 30%</label>
+                  <input id="fatness-30+" type="radio" name="product-fatness">
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset>
+              <legend>Наполнители:</legend>
+              <ul>
+                <li>
+                  <label for="filler-chocolate">шоколадные</label>
+                  <input id="filler-chocolate" type="checkbox" name="шоколадные">
+                </li>
+                <li>
+                  <label for="filler-sugar">сахарные присыпки</label>
+                  <input id="filler-sugar" type="checkbox" name="сахарные присыпки">
+                </li>
+                <li>
+                  <label for="filler-fruit">фрукты</label>
+                  <input id="filler-fruit" type="checkbox" name="фрукты">
+                </li>
+                <li>
+                  <label for="filler-syrup">сиропы</label>
+                  <input id="filler-syrup" type="checkbox" name="сиропы">
+                </li>
+                <li>
+                  <label for="filler-jam">джемы</label>
+                  <input id="filler-jam" type="checkbox" name="джемы">
+                </li>
+              </ul>
+            </fieldset>
+            <button type="submit">Применить</button>
+        </form>
   		</section>
   		<section class="product">
   			<h2>Каталог сливочного мороженного</h2>
