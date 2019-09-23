@@ -25,13 +25,17 @@
         </ul>
       </nav>
       <section class="interaction-header">
-        <button class="search" type="button">
+        <div class="search-container">
+          <button class="search" type="button">
+         </button>
           <form method="get" action="https://echo.htmlacademy.ru">
             <label class="visually-hidden" for="searching">Введите поисковый запрос</label>
-            <input id="searching" type="text" name="login" placeholder="Крем брюле">
+            <input id="searching" type="text" name="search" placeholder="Крем брюле">
           </form>
-        </button>
-        <button class="input" type="button">
+        </div>
+        <div class="input-container">
+          <button class="input" type="button">
+          </button>
           <form method="get" action="https://echo.htmlacademy.ru">
             <p>
               <label class="visually-hidden" for="user-login">Логин</label>
@@ -47,10 +51,11 @@
               <a href="">Новая регистрация</a>
             </p>
           </form>
+        </div>
+        <div class="basket">
+        <button class="basket" type="button">
         </button>
-        <button class="" type="button">
-          <!--тут будет корзина-->
-        </button>
+        </div>
       </section>
       <section class="working-time_phone">
         <p class="working-time">С 10 до 20, ежедневно</p>
