@@ -1,0 +1,249 @@
+
+/*Глобальные стили*/
+html {
+	box-sizing: border-box;
+}
+body {
+	margin: 0;
+	font-family: 'Roboto', sans-serif;
+	background-color: #849d8f;
+}
+img { 
+	max-width: 100% 
+}
+a { 
+	text-decoration: none 
+}
+*,
+*::before,
+*::after {
+	box-sizing: inherit; 
+}
+.visually-hidden {
+	position: absolute;
+  	clip: rect(0 0 0 0);
+  	width: 1px;
+  	height: 1px;
+  	margin: -1px;
+}
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap');
+/*Хедер*/
+nav ul {
+	padding-left: 0;
+}
+nav li {
+	list-style-type: none;
+}
+nav a {
+	font-size: 16px;
+	font-weight: bold;
+	color: white;
+}
+nav .submenu {
+	display: none;
+}
+.input form {
+	display: none;
+}
+.search-container form {
+	display: none;
+}
+.working-time-phone {
+	font-weight: bold;
+	color: white;
+	font-size: 14px;
+}
+.working-time-phone p {
+	margin-bottom: 10px;
+}
+.working-time-phone .phone {
+	font-size: 22px;
+	line-height: 10px;
+}
+.interaction-header button p {
+	color: white;
+	width: 14px;
+}
+/*Слайдер с мороженным на главной*/
+.slider ul {
+	padding-left: 0;
+}
+.slider-content li {
+	display: none;
+}
+.slider li {
+	list-style-type: none;
+}
+.slider-content .active {
+	display: block;
+	background-image: url(../img/gllacy1.png);
+	background-repeat: no-repeat;
+	background-position: 50% 0%;
+}
+.slider-content p {
+	font-size: 60px;
+	color: white;
+	font-weight: bold;
+}
+/*Специальные предложения*/
+.special-offers ul {
+	padding-left: 0;
+}
+.special-offers li {
+	list-style-type: none;
+}
+.special-offers h3 {
+	font-size: 23px;
+	color: white;
+	font-weight: bold;
+	margin-bottom: 30px; 
+}
+.special-offers p {
+	font-size: 12px;
+	color: white;
+	font-weight: bold;
+}
+.special-offers li:first-child {
+	background-image: url(../img/background-berry.jpg);
+	background-repeat: no-repeat;
+	background-position: 0 50%;
+}
+.special-offers li:last-child {
+	background-image: url(../img/background-chokolate.jpg);
+	background-repeat: no-repeat;
+	background-position: 0 50%;
+}
+/*Продукция*/
+.products ul {
+	padding-left: 0;
+}
+.products li {
+	list-style-type: none;
+}
+.products h3 {
+	font-weight: 500;
+	color: white;
+	font-size: 16px;
+}
+.products p {
+	font-size: 45px;
+	font-weight: 700;
+	color: white;
+	margin: 0;
+}
+.products p span {
+	font-size: 30px;
+}
+/*Пагинация*/
+.pagination {
+	padding-left: 0;
+}
+.pagination li {
+	list-style-type: none;
+}
+.pagination a {
+	color: #ffffff;
+	font-size: 16px;
+}
+/*Описание магазина*/
+.shop-description {
+	border-radius: 15px;
+	background-image: url(../img/background-seo.jpg);
+}
+.shop-description p {
+	font-size: 24px;
+	color: #323232;
+	font-weight: 500;
+}
+.shop-description ul {
+	padding-left: 0;
+}
+.shop-description li {
+	list-style-type: none;
+	font-size: 16px;
+	color: #323232;
+}
+/*Блог*/
+.blog {
+	border-radius: 15px;
+	background-color: #ffffff;
+	background-image: url(../img/background-strawerry.jpg);
+	background-repeat: no-repeat;
+	background-position: 100% 50%;
+}
+.blog h2 {
+	font-size: 16px;
+}
+.blog a {
+	text-decoration: underline;
+	color: #323232;
+	font-size: 24px;
+}
+/*Подписка на новости*/
+.newsletter-subscription {
+	border-radius: 10px;
+	padding-top: 4px;
+	padding-right: 6px;
+	padding-bottom: 4px;
+	padding-left: 6px;
+	background-image: url(../img/background-post.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.newsletter-subscription-box {
+	border-radius: 10px;
+	background-color: #ffffff;
+}
+.newsletter-subscription p {
+ 	font-size: 16px;
+ 	font-weight: normal;
+ 	color: #5a5a5a;
+}
+/*Контактная информация*/
+.contacts {
+	background-image: url(../img/map.png);
+}
+.contacts div {
+	background-color: #ffffff;
+	border-radius: 10px;
+}
+.contacts p, .contacts p a {
+	font-size: 18px;
+  	font-weight: bold;
+  	color: #323232;
+}
+.contacts p span {
+	font-size: 14px;
+	color: #323232;
+	font-weight: normal;
+}
+/*Футер*/
+footer ul {
+	padding-left: 0;
+}
+footer li {
+	list-style-type: none;
+}
+.footer-menu a {
+	font-size: 13px;
+	font-weight: bold;
+	color: #ffffff;
+}
+.copyright a {
+	font-size: 12px;
+	font-weight: normal;
+	color: #fefefe;
+}
+/*Форма обр. связи*/
+.back-communication {
+	display: none;
+}
+/*Хлебные крошко*/
+.bread-crumbs {
+	padding-left: 0;
+}
+.bread-crumbs li, .bread-crumbs a {
+	list-style-type: none;
+	font-size: 14px;
+	color: #ffffff;
+}

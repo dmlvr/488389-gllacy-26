@@ -2,6 +2,8 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>HTML Academy: Глейси</title>
   </head>
   <body>
@@ -27,45 +29,54 @@
       <section class="interaction-header">
         <div class="search-container">
           <button class="search" type="button">
+            <img src="img/search.svg" width="17" height="17">
          </button>
           <form method="get" action="https://echo.htmlacademy.ru">
             <label class="visually-hidden" for="searching">Введите поисковый запрос</label>
             <input id="searching" type="text" name="search" placeholder="Крем брюле">
           </form>
         </div>
-        <div class="input-container">
-          <button class="input" type="button">
+        <div class="input">
+          <button type="button">
+            <img src="img/input.svg" width="21" height="19">
+            <p>Вход</p>
           </button>
           <form method="get" action="https://echo.htmlacademy.ru">
-            <p>
-              <label class="visually-hidden" for="user-login">Логин</label>
-              <input id="user-login" type="text" name="login" placeholder="email@example.com">
-            </p>
-            <p>
-              <label class="visually-hidden" for="user-password">Пароль</label>
-              <input id="user-password" type="text" name="password" placeholder="********">
-            </p>
-            <button type="submit">Войти</button>
-            <p>
-              <a href="">Забыли пароль?</a>
-              <a href="">Новая регистрация</a>
-            </p>
+            <ul>
+              <li>
+                <label class="visually-hidden" for="user-login">Логин</label>
+                <input id="user-login" type="text" name="login" placeholder="email@example.com">
+              </li>
+              <li>
+                <label class="visually-hidden" for="user-password">Пароль</label>
+                <input id="user-password" type="text" name="password" placeholder="********">
+              </li>
+              <li>
+                <button type="submit">Войти</button>
+                <p>
+                  <a href="">Забыли пароль?</a>
+                  <a href="">Новая регистрация</a>
+                </p>
+              </li>
+            </ul>
           </form>
         </div>
-        <div class="basket">
-        <button class="basket" type="button">
-        </button>
+        <div class="cart">
+          <button type="button">
+            <img src="img/cart-empty.svg">
+            <p>Пусто</p>
+          </button>
         </div>
       </section>
-      <section class="working-time_phone">
-        <p class="working-time">С 10 до 20, ежедневно</p>
-        <p class="phone">8 812 450-25-25</p>
+      <section class="working-time-phone">
+        <p>С 10 до 20, ежедневно</p>
+        <span class="phone">8 812 450-25-25</span>
       </section>
   	</header>
   	<main>
-  		<h1>Интернет-магазин мороженного Глейси</h1>
+  		<h1 class="visually-hidden">Интернет-магазин мороженного Глейси</h1>
       <section class="slider">
-        <h2>Слайдер с мороженным</h2>
+        <h2 class="visually-hidden">Слайдер с мороженным</h2>
         <ul class="slider-content">
           <li class="active">
             <p>Крем-брюле и пломбир<br>с малиновым джемом</p>
@@ -93,6 +104,7 @@
         </ul>
       </section>
       <section class="special-offers">
+        <h2 class="visually-hidden">Специальные предложения</h2>
         <ul>
           <li>
             <h3>Малинка даром!</h3>
@@ -106,8 +118,8 @@
           </li>
         </ul>
       </section>
-      <section class="hit">
-        <h2>Хиты</h2>
+      <section class="products hit">
+        <h2 class="visually-hidden">Хиты продукции</h2>
         <ul>
           <li>
             <h3>Сливочное с апельсиновым<br> джемом и цитрусовой стружкой</h3>
@@ -136,7 +148,7 @@
         </ul>
       </section>
       <section class="shop-description">
-        <h2>Описание магазина Глейси</h2>
+        <h2 class="visually-hidden">Описание магазина Глейси</h2>
         <p>Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</p>
         <ul>
           <li>Все наше мороженое изготавливается на собственном<br>производстве, с использованием современного оборудования<br>и проверенных временем технологий.</li>
@@ -150,19 +162,26 @@
         <a href="#">10 способов сервировки<br>фруктовых щербетов к<br>столу</a>
       </section>
       <section class="newsletter-subscription">
-        <h2>Подписка на рассылку магазина Глейси</h2>
-        <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе<br>всего самого вкусного, что у нас происходит. Обещаем не спамить<br>и не слать всякой ненужной ерунды. Честно =) </p>
-        <!--Тут будет форма подписки на рассылку-->
+        <div class="newsletter-subscription-box">
+          <h2 class="visually-hidden">Подписка на рассылку магазина Глейси</h2>
+          <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе<br>всего самого вкусного, что у нас происходит. Обещаем не спамить<br>и не слать всякой ненужной ерунды. Честно =) </p>
+          <form method="get" action="https://echo.htmlacademy.ru">
+            <label class="visually-hidden" for="subscription-email">Адрес электронной почты</label>
+            <input id="subscription-email" type="text" name="subscription-email" placeholder="Электронная почта">
+            <button type="submit">Отправить</button>
+          </form>
+        </div>
       </section>
       <section class="contacts">
-        <h2>Адрес магазина Глейси</h2>
-        <div class="address-unit">
+        <h2 class="visually-hidden">Адрес магазина Глейси</h2>
+        <div>
           <p><span>Адрес главного офиса<br>
           и офлайн-магазина:</span><br>
           ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
-          <p><span>Для заказов по телеону:</span>
+          <p><span>Для заказов по телеону:</span><br>
           <a href="tel:+78124502525">8 812 450-25-25</a><br>
           <span>(с 10 до 20 ежедневно)</span></p>
+          <button>Форма обратной связи</button>
         </div>
       </section>
   	</main>
@@ -183,8 +202,10 @@
           <li><a href="#">Экологические стандарты</a></li>
         </ul>
       </section>
-      <a href="img/logo-htmlacademy-small.svg"></a>
-      <a href="https://htmlacademy.ru">Сделано в HTML Academy © 2019</a>
+      <div class="copyright">
+        <a href="https://htmlacademy.ru/"><img src="img/logo-htmlacademy-small.svg" width="125" height="39"></a><br>
+        <a href="https://htmlacademy.ru">Сделано в HTML Academy © 2019</a>
+      </div>
   	</footer>
     <section class="back-communication">
       <button aria-label="Закрыть форму обратной связи">х</button>

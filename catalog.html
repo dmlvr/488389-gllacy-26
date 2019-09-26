@@ -1,40 +1,45 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
 	<meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 	<title>Каталог товаров магазин глейси</title>
 </head>
 <body>
   <header>
-    <nav>
-      <a href="#">
-        <img src="img/logo.svg" width="288" height="28" alt="Логотип интернет-магазина мороженного Глейси">
-      </a>
-      <ul>
-        <li><a href="catalog.html">Каталог</a>
-          <ul class="submenu">
-            <li><a class="new" href="">Новинки</a></li>
-            <li><a href="">Сливочное</a></li>
-            <li><a href="">Щербеты</a></li>
-            <li><a href="">Фруктовый лед</a></li>
-            <li><a href="">Мелорин</a></li>
-          </ul>
-        </li>
-        <li><a href="#">Доставка и оплата</a></li>
-        <li><a href="#">О компании</a></li>
-      </ul>
+      <nav>
+        <a href="#">
+          <img src="img/logo.svg" width="288" height="28" alt="Логотип интернет-магазина мороженного Глейси">
+        </a>
+        <ul>
+          <li><a href="catalog.html">Каталог</a>
+            <ul class="submenu">
+              <li><a class="new" href="">Новинки</a></li>
+              <li><a href="">Сливочное</a></li>
+              <li><a href="">Щербеты</a></li>
+              <li><a href="">Фруктовый лед</a></li>
+              <li><a href="">Мелорин</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Доставка и оплата</a></li>
+          <li><a href="#">О компании</a></li>
+        </ul>
       </nav>
       <section class="interaction-header">
         <div class="search-container">
           <button class="search" type="button">
+            <img src="img/search.svg" width="17" height="17">
          </button>
           <form method="get" action="https://echo.htmlacademy.ru">
             <label class="visually-hidden" for="searching">Введите поисковый запрос</label>
             <input id="searching" type="text" name="search" placeholder="Крем брюле">
           </form>
         </div>
-        <div class="input-container">
-          <button class="input" type="button">
+        <div class="input">
+          <button type="button">
+            <img src="img/input.svg" width="21" height="19">
+            <p>Вход</p>
           </button>
           <form method="get" action="https://echo.htmlacademy.ru">
             <ul>
@@ -46,23 +51,26 @@
                 <label class="visually-hidden" for="user-password">Пароль</label>
                 <input id="user-password" type="text" name="password" placeholder="********">
               </li>
-              <button type="submit">Войти</button>
               <li>
-                <a href="">Забыли пароль?</a>
-                <a href="">Новая регистрация</a>
+                <button type="submit">Войти</button>
+                <p>
+                  <a href="">Забыли пароль?</a>
+                  <a href="">Новая регистрация</a>
+                </p>
               </li>
             </ul>
           </form>
         </div>
-        <div class="basket">
-          <button class="basket" type="button">
+        <div class="cart">
+          <button type="button">
+            <img src="img/cart-empty.svg">
+            <p>2 товара</p>
           </button>
-          <!--Тут будет корзина-->
         </div>
       </section>
-      <section class="working-time_phone">
-        <p class="working-time">С 10 до 20, ежедневно</p>
-        <p class="phone">8 812 450-25-25</p>
+      <section class="working-time-phone">
+        <p>С 10 до 20, ежедневно</p>
+        <span class="phone">8 812 450-25-25</span>
       </section>
     </header>
     <main>
@@ -73,7 +81,7 @@
   			<li>Сливочное</li>
   		</ul>
   		<section class="filters">
-  			<h2>Фильтр для подбора продукции</h2>
+  			<h2 class="visually-hidden">Фильтр для подбора продукции</h2>
   			<form method="get" action="https://echo.htmlacademy.ru">
           <p>
             <label for="products-sort"></label>
@@ -137,8 +145,8 @@
             <button type="submit">Применить</button>
         </form>
   		</section>
-  		<section class="product">
-  			<h2>Каталог сливочного мороженного</h2>
+  		<section class="products">
+  			<h2 class="visually-hidden">Каталог сливочного мороженного</h2>
   			<ul>
   				<li>
   					<h3>Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
@@ -202,13 +210,13 @@
   				</li>
   			</ul>
   			<ul class="pagination">
-          <li><a href=""><img src="img/arrow-left" width="8" height="12"></a></li>
+          <li><a href=""><img src="img/icon-left-small.svg" width="8" height="12"></a></li>
   				<li><a class="active">1</a></li>
   				<li><a href="">2</a></li>
   				<li><a href="">3</a></li>
   				<li><a href="">4</a></li>
   				<li><a href="">5</a></li>
-  				<li><a href=""><img src="img/arrow-right" width="8" height="12"></a></li>
+  				<li><a href=""><img src="img/icon-right-small.svg" width="8" height="12"></a></li>
   			</ul>
   		</section>
   	</main>
@@ -229,8 +237,10 @@
           <li><a href="#">Экологические стандарты</a></li>
         </ul>
       </section>
-      <a href="img/logo-htmlacademy-small.svg"></a>
-      <a href="https://htmlacademy.ru">Сделано в HTML Academy © 2019</a>
+      <div class="copyright">
+        <a href="https://htmlacademy.ru/"><img src="img/logo-htmlacademy-small.svg" width="125" height="39"></a><br>
+        <a href="https://htmlacademy.ru">Сделано в HTML Academy © 2019</a>
+      </div>
     </footer>
 </body>
 </html>
