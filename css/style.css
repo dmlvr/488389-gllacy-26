@@ -1,8 +1,13 @@
-
 /*Глобальные стили*/
 html {
 	box-sizing: border-box;
 }
+*,
+*::before,
+*::after {
+	box-sizing: inherit; 
+}
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap');
 body {
 	margin: 0;
 	font-family: 'Roboto', sans-serif;
@@ -14,11 +19,6 @@ img {
 a { 
 	text-decoration: none 
 }
-*,
-*::before,
-*::after {
-	box-sizing: inherit; 
-}
 .visually-hidden {
 	position: absolute;
   	clip: rect(0 0 0 0);
@@ -26,10 +26,24 @@ a {
   	height: 1px;
   	margin: -1px;
 }
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap');
+.container {
+	width: 1146px;
+	margin: 0 auto;
+}
+.flex {
+	display: flex;
+}
 /*Хедер*/
+header {
+	padding-top: 5px;
+	position: relative;
+}
 nav ul {
+	width: 350px;
+	justify-content: space-between;
 	padding-left: 0;
+	margin-left: 24px;
+	margin-top: 24px;
 }
 nav li {
 	list-style-type: none;
@@ -42,6 +56,11 @@ nav a {
 nav .submenu {
 	display: none;
 }
+.interaction-header {
+	margin-left: auto;
+	width: 245px;
+	justify-content: space-between;
+}
 .input form {
 	display: none;
 }
@@ -52,9 +71,13 @@ nav .submenu {
 	font-weight: bold;
 	color: white;
 	font-size: 14px;
+	position: absolute;
+	right: 0;
+	top: 58px;
 }
 .working-time-phone p {
 	margin-bottom: 10px;
+	text-align: right;
 }
 .working-time-phone .phone {
 	font-size: 22px;
@@ -67,23 +90,42 @@ nav .submenu {
 /*Слайдер с мороженным на главной*/
 .slider ul {
 	padding-left: 0;
-}
-.slider-content li {
-	display: none;
+	margin: 0;
 }
 .slider li {
 	list-style-type: none;
 }
-.slider-content .active {
-	display: block;
+.slider-content li {
 	background-image: url(../img/gllacy1.png);
 	background-repeat: no-repeat;
 	background-position: 50% 0%;
+	flex-direction: column;
+	min-height: 570px;
 }
 .slider-content p {
 	font-size: 60px;
 	color: white;
 	font-weight: bold;
+	text-align: center;
+	margin-bottom: 26px;
+	margin-top: auto;
+	line-height: 62px;
+}
+.slider-content button {
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 43px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	border: none;
+	border-radius: 25px; 
+	font-size: 30px;
+	font-weight: bold;
+	color: white;
+	width: 280px;
+	text-align: center;
+	box-shadow: 0px 2px 2px 0 rgba(172, 16, 0, 0.64);
+	background-image: linear-gradient(to top, #e74a35, #f26843);
 }
 /*Специальные предложения*/
 .special-offers ul {
@@ -246,4 +288,15 @@ footer li {
 	list-style-type: none;
 	font-size: 14px;
 	color: #ffffff;
+}
+/*Временные стили для сетки*/
+.temporarily-for-grid {
+	background-image: url('../img/background-gllacy-grid.png');
+	background-size: 1146px auto;
+	background-repeat: no-repeat;
+	position: absolute;
+	width: 100%;
+	height: 2416px;
+	background-position: top center;
+	z-index: -1;
 }

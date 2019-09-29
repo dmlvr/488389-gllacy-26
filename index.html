@@ -7,12 +7,13 @@
     <title>HTML Academy: Глейси</title>
   </head>
   <body>
-  	<header>
-      <nav>
-        <a href="#">
-          <img src="img/logo.svg" width="288" height="28" alt="Логотип интернет-магазина мороженного Глейси">
+    <div class="temporarily-for-grid"></div>
+    <header class="flex container">
+      <nav class="flex">
+        <a href="/">
+          <img src="img/logo.svg" width="154" height="64" alt="Логотип интернет-магазина мороженного Глейси">
         </a>
-        <ul>
+        <ul class="flex">
           <li><a href="catalog.html">Каталог</a>
             <ul class="submenu">
               <li><a class="new" href="">Новинки</a></li>
@@ -26,7 +27,7 @@
           <li><a href="#">О компании</a></li>
         </ul>
       </nav>
-      <section class="interaction-header">
+      <section class="interaction-header flex">
         <div class="search-container">
           <button class="search" type="button">
             <img src="img/search.svg" width="17" height="17">
@@ -78,18 +79,18 @@
       <section class="slider">
         <h2 class="visually-hidden">Слайдер с мороженным</h2>
         <ul class="slider-content">
-          <li class="active">
+          <li class="active flex">
             <p>Крем-брюле и пломбир<br>с малиновым джемом</p>
-            <button class="call-to-action">Давайте оба!</button>
+            <button>Давайте оба!</button>
           </li>
-          <li>
+          <!-- <li class="flex">
             <p>Шоколадный пломбир<br>и лимонный сорбет</p>
-            <button class="call-to-action">Давайте оба!</button>
+            <button>Давайте оба!</button>
           </li>
-          <li>
+          <li class="flex">
             <p>Пломбир с помадкой<br>и клубничный щербет</p>
-            <button class="call-to-action">Давайте оба!</button>
-          </li>
+            <button>Давайте оба!</button>
+          </li> -->
         </ul>
         <ul class="slider-browsing">
           <li class="active">
