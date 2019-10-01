@@ -33,6 +33,14 @@ a {
 .flex {
 	display: flex;
 }
+.button {
+	text-align: center;
+	box-shadow: 0px 2px 2px 0 rgba(172, 16, 0, 0.64);
+	background-image: linear-gradient(to top, #e74a35, #f26843);
+	border: none;
+	color: #ffffff;
+	font-weight: bold;
+}
 /*Хедер*/
 header {
 	padding-top: 5px;
@@ -121,6 +129,9 @@ nav .submenu {
 	width: 14px;
 }
 /*Слайдер с мороженным на главной*/
+.slider {
+	position: relative;
+}
 .slider ul {
 	padding-left: 0;
 	margin: 0;
@@ -142,7 +153,7 @@ nav .submenu {
 	text-align: center;
 	margin-bottom: 30px;
 	margin-top: auto;
-	line-height: 62px;
+	line-height: 60px;
 }
 .slider-content button {
 	margin-left: auto;
@@ -150,40 +161,63 @@ nav .submenu {
 	margin-bottom: 43px;
 	padding-top: 15px;
 	padding-bottom: 15px;
-	border: none;
 	border-radius: 25px; 
 	font-size: 30px;
-	font-weight: bold;
-	color: white;
 	width: 280px;
-	text-align: center;
-	box-shadow: 0px 2px 2px 0 rgba(172, 16, 0, 0.64);
-	background-image: linear-gradient(to top, #e74a35, #f26843);
 }
-.slider-content button:hover {
+.button:hover {
 	cursor: pointer;
 }
 .slider-browsing {
 	position: absolute;
-	bottom: 0;
+	bottom: 63px;
+}
+.slider-browsing button {
+	width: 21px;
+	height: 21px;
+	border-radius: 50%;
+	background-color: rgba(255,255,255,0.0);
+	border: 2px solid rgba(255,255,255,0.5);
+	margin-right: 8px;
+}
+.slider-browsing .active button {
+	background-color: rgb(255,255,255);
 }
 /*Специальные предложения*/
 .special-offers ul {
 	padding-left: 0;
+	margin-top: 0;
+	justify-content: space-between;
 }
 .special-offers li {
+	width: 560px;
+	flex-direction: column;
 	list-style-type: none;
+	border-radius: 15px;
+	padding: 15px 20px 23px 18px;
 }
 .special-offers h3 {
-	font-size: 23px;
+	font-size: 35px;
 	color: white;
 	font-weight: bold;
-	margin-bottom: 30px; 
+	margin-top: 0;
+	margin-bottom: 0;
 }
 .special-offers p {
-	font-size: 12px;
+	font-size: 18px;
 	color: white;
 	font-weight: bold;
+	margin-top: 17px;
+	margin-bottom: 43px;
+}
+.special-offers button {
+	display: flex;
+	margin-top: auto;
+	margin-left: auto;
+	font-size: 18px;
+	padding: 12px 24px 12px 24px;
+	border-radius: 20px;
+	line-height: 1.33;
 }
 .special-offers li:first-child {
 	background-image: url(../img/background-berry.jpg);
@@ -197,21 +231,29 @@ nav .submenu {
 }
 /*Продукция*/
 .products ul {
+	margin-top: 40px;
 	padding-left: 0;
+	justify-content: space-between;
 }
 .products li {
 	list-style-type: none;
+	display: flex;
+	flex-direction: column-reverse;
 }
 .products h3 {
 	font-weight: 500;
 	color: white;
 	font-size: 16px;
+	text-align: center;
+	margin-top: 26px;
 }
 .products p {
 	font-size: 45px;
 	font-weight: 700;
 	color: white;
 	margin: 0;
+	margin-top: -60px;
+	z-index: 1;
 }
 .products p span {
 	font-size: 30px;
