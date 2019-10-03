@@ -28,7 +28,8 @@ a {
 }
 .container {
 	width: 1146px;
-	margin: 0 auto;
+	margin-left: auto;
+	margin-right: auto;
 }
 .flex {
 	display: flex;
@@ -183,6 +184,15 @@ nav .submenu {
 .slider-browsing .active button {
 	background-color: rgb(255,255,255);
 }
+/*Заголовок и крошки на странице каталога*/
+.title {
+	flex-direction: column-reverse;
+}
+.title h1 {
+	font-size: 35px;
+	line-height: 1.17;
+	color: #ffffff;
+}
 /*Специальные предложения*/
 .special-offers ul {
 	padding-left: 0;
@@ -234,18 +244,34 @@ nav .submenu {
 	margin-top: 40px;
 	padding-left: 0;
 	justify-content: space-between;
+	flex-wrap: wrap;
 }
 .products li {
 	list-style-type: none;
 	display: flex;
 	flex-direction: column-reverse;
 }
+.hit li {
+	position: relative;
+}
+.hit li::after {
+	content: "";
+	width: 61px;
+	height: 61px;
+	background-image: url(../img/hit.svg);
+	background-size: cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
 .products h3 {
+	max-width: 250px;
 	font-weight: 500;
 	color: white;
 	font-size: 16px;
 	text-align: center;
-	margin-top: 26px;
+	margin-top: 21px;
+	line-height: 1.38;
 }
 .products p {
 	font-size: 45px;
@@ -272,20 +298,58 @@ nav .submenu {
 /*Описание магазина*/
 .shop-description {
 	border-radius: 15px;
+	padding: 29px 17px 0 21px;
 	background-image: url(../img/background-seo.jpg);
 }
 .shop-description p {
 	font-size: 24px;
 	color: #323232;
 	font-weight: 500;
+	margin-top: 0;
+	line-height: 1.25; 
 }
 .shop-description ul {
-	padding-left: 0;
+	padding-left: 56px;
+	flex-wrap: wrap;
+	justify-content: space-between;
 }
 .shop-description li {
 	list-style-type: none;
 	font-size: 16px;
 	color: #323232;
+	width: 485px;
+	margin-bottom: 21px; 
+	line-height: 1.38;
+	position: relative;
+}
+.shop-description li::after {
+	content: "";
+	width: 49px;
+	height: 49px;
+	background-size: cover;
+	position: absolute;
+	top: -14px;
+	left: -57px;
+}
+.shop-description li:nth-child(1)::after {
+	background-image: url(../img/seo-1.svg);
+}
+.shop-description li:nth-child(2)::after {
+	background-image: url(../img/seo-2.svg);
+}
+.shop-description li:nth-child(3)::after {
+	background-image: url(../img/seo-3.svg);
+}
+.shop-description li:nth-child(4)::after {
+	background-image: url(../img/seo-4.svg);
+}
+/*для сетки блога и подписки */
+.blog-sub {
+	justify-content: space-between;
+}
+.blog-sub section {
+	width: 560px;
+	margin-top: 26px;
 }
 /*Блог*/
 .blog {
@@ -293,23 +357,23 @@ nav .submenu {
 	background-color: #ffffff;
 	background-image: url(../img/background-strawerry.jpg);
 	background-repeat: no-repeat;
-	background-position: 100% 50%;
+	background-position: 205px -43px;
+	padding: 26px 20px 80px 20px;
 }
 .blog h2 {
 	font-size: 16px;
+	margin: 0 0 7px 0;
 }
 .blog a {
 	text-decoration: underline;
 	color: #323232;
 	font-size: 24px;
+	line-height: 1.25;
 }
 /*Подписка на новости*/
 .newsletter-subscription {
 	border-radius: 10px;
-	padding-top: 4px;
-	padding-right: 6px;
-	padding-bottom: 4px;
-	padding-left: 6px;
+	padding: 4px 6px 4px 6px;
 	background-image: url(../img/background-post.svg);
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -317,41 +381,122 @@ nav .submenu {
 .newsletter-subscription-box {
 	border-radius: 10px;
 	background-color: #ffffff;
+	padding: 31px 21px 34px 21px;
 }
 .newsletter-subscription p {
+	margin-top: 0;
+	margin-bottom: 36px;
  	font-size: 16px;
  	font-weight: normal;
  	color: #5a5a5a;
+ 	line-height: 1.38;
+}
+.newsletter-subscription button {
+	margin-left: auto;
+	border-radius: 25px;
+	width: 129px;
+}
+.newsletter-subscription input {
+	width: 368px;
+	border-radius: 5px;
+	padding: 12px 0 13px 14px;
+	border: 1px solid rgba(178, 178, 178, 0.52);;
 }
 /*Контактная информация*/
 .contacts {
 	background-image: url(../img/map.png);
+	margin-top: 38px;
+	padding: 63px 27px 66px 239px;
+	position: relative;
+}
+.contacts::before {
+	content: "";
+	width: 220px;
+	height: 140px;
+	background-image: url(../img/map-marker.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin-top: 77px;
 }
 .contacts div {
+	width: 302px;
 	background-color: #ffffff;
 	border-radius: 10px;
+	margin-left: auto;
+	padding: 27px 29px 31px 25px;
 }
-.contacts p, .contacts p a {
+.contacts p, .contacts a {
 	font-size: 18px;
-  	font-weight: bold;
-  	color: #323232;
+  font-weight: bold;
+  color: #323232;
+  margin-top: 0;
+  line-height: 1.4;
 }
-.contacts p span {
+.contacts .small {
 	font-size: 14px;
-	color: #323232;
 	font-weight: normal;
+	margin-bottom: 3px;
+}
+.contacts button {
+	width: 252px;
+	padding: 13px 28px 13px 28px;
+	border-radius: 25px;
 }
 /*Футер*/
+footer {
+	margin-top: 18px;
+}
 footer ul {
 	padding-left: 0;
 }
 footer li {
 	list-style-type: none;
 }
-.footer-menu a {
-	font-size: 13px;
+.social-network {
+	width: 187px;
+	justify-content: space-between;
+}
+.social-network img {
+	border: 3px solid rgba(255,255,255,0.5);
+	border-radius: 50%;
+}
+.footer-menu {
+	margin-left: 235px;
+	width: 306px;
+	flex-wrap: wrap;
+	position: relative;
+}
+.footer-menu li:nth-child(1) a {
 	font-weight: bold;
+}
+.footer-menu li:nth-child(1)::before {
+	content: "";
+	width: 15px;
+	height: 13px;
+	background-image: url(../img/heart.svg); 
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: absolute;
+	left: -22px;
+	top: 3px;
+}
+.footer-menu li:nth-child(2) {
+	margin-left: 30px; 
+}
+.footer-menu li:nth-child(4) {
+	margin-left: 43px; 
+}
+.footer-menu li a {
+	font-size: 13px;
+	font-weight: normal;
 	color: #ffffff;
+}
+.copyright {
+	margin-left: auto;
+}
+.copyright img {
+	position: relative;
+	left: -8px;
 }
 .copyright a {
 	font-size: 12px;
@@ -373,12 +518,19 @@ footer li {
 }
 /*Временные стили для сетки*/
 .temporarily-for-grid {
-	background-image: url('../img/background-gllacy-grid.png');
-	background-size: 1146px auto;
 	background-repeat: no-repeat;
 	position: absolute;
 	width: 100%;
-	height: 2416px;
 	background-position: top center;
 	z-index: -1;
+}
+.index-html {
+	background-image: url('../img/background-gllacy-grid.png');
+	background-size: 1146px auto;
+	height: 2416px;
+}
+.catalog-html {
+	background-image: url('../img/background-gllacy-grid-catalog.jpg');
+	background-size: 1200px auto;
+	height: 1650px;
 }
