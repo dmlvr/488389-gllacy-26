@@ -7,7 +7,7 @@
 	<title>Каталог товаров магазин глейси</title>
 </head>
 <body>
-  <div class="temporarily-for-grid catalog-html"></div>
+  <!-- <div class="temporarily-for-grid catalog-html"></div> -->
   <header class="flex container">
       <nav class="flex">
         <a href="/">
@@ -75,80 +75,90 @@
       </section>
     </header>
     <main>
-      <section class="title flex">
-    		<h1>Сливочное мороженное</h1>
+      <section class="title flex container">
+    		<h1>Сливочное мороженое</h1>
     		<ul class="bread-crumbs flex">
     			<li><a href="index.html">Главная</a></li>
     			<li><a href="#">Каталог</a></li>
     			<li>Сливочное</li>
     		</ul>
       </section>
-  		<section class="filters">
+  		<section class="filters container">
   			<h2 class="visually-hidden">Фильтр для подбора продукции</h2>
   			<form method="get" action="https://echo.htmlacademy.ru">
-          <p>
-            <label for="products-sort"></label>
-            <select id="products-sort" name="products-sort">
-              <option>по популярности</option>
-              <option>сначала недорогие</option>
-              <option>сначала дорогие</option>
-              <option>по жирности</option>
-            </select>
-          </p>
-          <p>
-            <label for="product-price">Цена: 100 руб. - 500 руб.</label>
-            <!--Блок с бегунками на сортировку по цене-->
-          </p>
-            <fieldset>
-              <legend>Жирность:</legend>
-              <ul>
-                <li>
-                  <label for="fatness-0" aria-label="Жирность 0%">0%</label>
-                  <input id="fatness-0" type="radio" name="product-fatness">
-                </li>
-                <li>
-                  <label for="fatness-10" aria-label="Жирность  до 10%">до 10%</label>
-                  <input id="fatness-10" type="radio" name="product-fatness">
-                </li>
-                <li>
-                  <label for="fatness-30" aria-label="Жирность  до 30%">до 30%</label>
-                  <input id="fatness-30" type="radio" name="product-fatness">
-                </li>
-                <li>
-                  <label for="fatness-30+" aria-label="Жирность  выше 30%">выше 30%</label>
-                  <input id="fatness-30+" type="radio" name="product-fatness">
-                </li>
-              </ul>
-            </fieldset>
-            <fieldset>
-              <legend>Наполнители:</legend>
-              <ul>
-                <li>
-                  <label for="filler-chocolate">шоколадные</label>
-                  <input id="filler-chocolate" type="checkbox" name="шоколадные">
-                </li>
-                <li>
-                  <label for="filler-sugar">сахарные присыпки</label>
-                  <input id="filler-sugar" type="checkbox" name="сахарные присыпки">
-                </li>
-                <li>
-                  <label for="filler-fruit">фрукты</label>
-                  <input id="filler-fruit" type="checkbox" name="фрукты">
-                </li>
-                <li>
-                  <label for="filler-syrup">сиропы</label>
-                  <input id="filler-syrup" type="checkbox" name="сиропы">
-                </li>
-                <li>
-                  <label for="filler-jam">джемы</label>
-                  <input id="filler-jam" type="checkbox" name="джемы">
-                </li>
-              </ul>
-            </fieldset>
-            <button type="submit">Применить</button>
+          <ul class="flex">
+            <li>
+              <label for="products-sort">Сортировка:</label>
+              <select id="products-sort" name="products-sort">
+                <option>по популярности</option>
+                <option>сначала недорогие</option>
+                <option>сначала дорогие</option>
+                <option>по жирности</option>
+              </select>
+            </li>
+            <li>
+              <label for="product-price">Цена: 100 руб. - 500 руб.</label>
+              <div class="sort-by-price">
+                <!--Блок с бегунками на сортировку по цене-->
+              </div>
+            </li>
+            <li>
+              <fieldset class="filter-fat">
+                <legend>Жирность:</legend>
+                <ul class="flex">
+                  <li>
+                    <label for="fatness-0" aria-label="Жирность 0%">0%</label>
+                    <input id="fatness-0" type="radio" name="product-fatness">
+                  </li>
+                  <li>
+                    <label for="fatness-10" aria-label="Жирность  до 10%">до 10%</label>
+                    <input id="fatness-10" type="radio" name="product-fatness">
+                  </li>
+                  <li>
+                    <label for="fatness-30" aria-label="Жирность  до 30%">до 30%</label>
+                    <input id="fatness-30" type="radio" name="product-fatness">
+                  </li>
+                  <li>
+                    <label for="fatness-30+" aria-label="Жирность  выше 30%">выше 30%</label>
+                    <input id="fatness-30+" type="radio" name="product-fatness">
+                  </li>
+                </ul>
+              </fieldset>
+            </li>
+            <li>
+              <fieldset class="filter-fillers">
+                <legend>Наполнители:</legend>
+                <ul class="flex">
+                  <li>
+                    <label for="filler-chocolate">шоколадные</label>
+                    <input id="filler-chocolate" type="checkbox" name="шоколадные">
+                  </li>
+                  <li>
+                    <label for="filler-sugar">сахарные присыпки</label>
+                    <input id="filler-sugar" type="checkbox" name="сахарные присыпки">
+                  </li>
+                  <li>
+                    <label for="filler-fruit">фрукты</label>
+                    <input id="filler-fruit" type="checkbox" name="фрукты">
+                  </li>
+                  <li>
+                    <label for="filler-syrup">сиропы</label>
+                    <input id="filler-syrup" type="checkbox" name="сиропы">
+                  </li>
+                  <li>
+                    <label for="filler-jam">джемы</label>
+                    <input id="filler-jam" type="checkbox" name="джемы">
+                  </li>
+                </ul>
+              </fieldset>
+            </li>
+            <li>
+              <button type="submit">Применить</button>
+            </li>
+          </ul>
         </form>
   		</section>
-  		<section class="products container">
+  		<section class="products catalog container">
   			<h2 class="visually-hidden">Каталог сливочного мороженного</h2>
   			<ul class="flex">
   				<li>
@@ -206,13 +216,13 @@
             <p>355₽<span>/кг</span></p>
   					<img src="img/ice-cream11.png" width="267" height="267" alt="Сливочное с кусочками черного шоколада">
   				</li>
-  				<li>
-  					<h3>Сливочное с мятным сиропом</h3>
+          <li>
+            <h3>Сливочное с мятным сиропом</h3>
             <p>420₽<span>/кг</span></p>
-  					<img src="img/ice-cream12.png" width="267" height="267" alt="Сливочное с мятным сиропом">
-  				</li>
+            <img src="img/ice-cream12.png" width="267" height="267" alt="Сливочное с кусочками черного шоколада">
+          </li>
   			</ul>
-  			<ul class="pagination">
+  			<ul class="pagination flex">
           <li><a href=""><img src="img/icon-left-small.svg" width="8" height="12"></a></li>
   				<li><a class="active">1</a></li>
   				<li><a href="">2</a></li>

@@ -71,7 +71,6 @@ nav .submenu {
 .interaction-header {
 	margin-top: 17px;
 	margin-left: auto;
-	width: 245px;
 	justify-content: space-between;
 }
 .interaction-header button {
@@ -89,15 +88,18 @@ nav .submenu {
 	width: 93px;
 	height: 33px;
 	border-radius: 20px;
+	margin-left: 10px;
 }
 .input button img {
 	margin-left: 8px;
 	margin-right: 8px;
 }
 .cart button {
-	width: 100px;
+/*	min-width: 100px;*/
+	padding-right: 16px;
 	height: 33px;
 	border-radius: 20px;
+	margin-left: 10px;
 }
 .cart button img {
 	margin-left: 8px;
@@ -127,7 +129,7 @@ nav .submenu {
 }
 .interaction-header button p {
 	color: white;
-	width: 14px;
+	/*width: 14px;*/
 }
 /*Слайдер с мороженным на главной*/
 .slider {
@@ -188,10 +190,34 @@ nav .submenu {
 .title {
 	flex-direction: column-reverse;
 }
+.bread-crumbs {
+	margin-top: 20px;
+	margin-bottom: 5px;
+	padding-left: 0;
+}
+.bread-crumbs li, .bread-crumbs a {
+	list-style-type: none;
+	font-size: 14px;
+	color: #ffffff;
+}
+.bread-crumbs li {
+	padding-left: 7px;
+}
+.bread-crumbs li:first-child {
+	padding-left: 0;
+}
+.bread-crumbs li::after {
+	content: "»";
+	padding-left: 7px;
+}
+.bread-crumbs li:last-child::after {
+	content: "";
+}
 .title h1 {
 	font-size: 35px;
 	line-height: 1.17;
 	color: #ffffff;
+	margin-top: 0;
 }
 /*Специальные предложения*/
 .special-offers ul {
@@ -239,6 +265,77 @@ nav .submenu {
 	background-repeat: no-repeat;
 	background-position: 0 50%;
 }
+/*Фильтры на странице каталога*/
+.filters ul {
+	padding-left: 0;
+	flex-wrap: wrap;
+	margin-top: 2px;
+}
+.filters li {
+	list-style-type: none;
+	margin-left: 15px;
+}
+.filters li:first-child {
+	margin-left: 0;
+}
+.filters li:nth-child(4) {
+	margin-left: 0;
+	margin-top: 2px;
+}
+.filters li button {
+	margin-top: 30px;
+	border: 2px solid #ffffff;
+	background-color: rgba(255,255,255,0.2);
+	color: white;
+	padding: 6px 25px 9px 31px;
+	border-radius: 20px;
+}
+.filters label, .filters legend {
+	font-size: 14px;
+	color: #ffffff;
+	display: block;
+	padding-left: 15px;
+	padding-bottom: 5px;
+}
+.filters select {
+	border: none;
+	background: rgba(255,255,255,0.2);
+	padding: 9px 10px 9px 12px;
+	font-size: 16px;
+	color: #ffffff;
+	border-radius: 20px;
+}
+.sort-by-price {
+	width: 220px;
+	height: 37px;
+	opacity: 0.2;
+  background-color: #ffffff;
+  border-radius: 20px;
+}
+.filters fieldset {
+	border: 0;
+}
+.filter-fat {
+	width: 415px;
+}
+.filter-fillers {
+	width: 703px;
+}
+.filters fieldset ul {
+	background-color: rgba(255,255,255,0.2);
+}
+.filters fieldset ul label {
+	font-size: 16px;
+}
+.filters fieldset li {
+	display: flex;
+	flex-direction: row-reverse;
+	align-items: center;
+}
+.filters input[type="radio"] {
+	width: 22px;
+	height: 22px;
+}
 /*Продукция*/
 .products ul {
 	margin-top: 40px;
@@ -250,6 +347,7 @@ nav .submenu {
 	list-style-type: none;
 	display: flex;
 	flex-direction: column-reverse;
+	justify-content: flex-end;
 }
 .hit li {
 	position: relative;
@@ -264,8 +362,13 @@ nav .submenu {
 	top: 0;
 	left: 0;
 }
-.products h3 {
+.catalog li {
+	margin-bottom: 22px;
+}
+.catalog h3 {
 	max-width: 250px;
+}
+.products h3 {
 	font-weight: 500;
 	color: white;
 	font-size: 16px;
@@ -285,15 +388,25 @@ nav .submenu {
 	font-size: 30px;
 }
 /*Пагинация*/
-.pagination {
+.products .pagination {
 	padding-left: 0;
+	justify-content: flex-end;
+	margin-top: 45px;
+	margin-bottom: 26px;
 }
 .pagination li {
-	list-style-type: none;
+	font-size: 16px;
+	border-radius: 50%;
+	padding: 3px 9px;
+}
+.pagination .active {
+	background-color: rgba(255,255,255,0.2);
+	color: #ffffff;
+	border-radius: 50%;
+	padding: 3px 9px;
 }
 .pagination a {
 	color: #ffffff;
-	font-size: 16px;
 }
 /*Описание магазина*/
 .shop-description {
@@ -507,15 +620,6 @@ footer li {
 .back-communication {
 	display: none;
 }
-/*Хлебные крошко*/
-.bread-crumbs {
-	padding-left: 0;
-}
-.bread-crumbs li, .bread-crumbs a {
-	list-style-type: none;
-	font-size: 14px;
-	color: #ffffff;
-}
 /*Временные стили для сетки*/
 .temporarily-for-grid {
 	background-repeat: no-repeat;
@@ -530,7 +634,7 @@ footer li {
 	height: 2416px;
 }
 .catalog-html {
-	background-image: url('../img/background-gllacy-grid-catalog.jpg');
+	background-image: url('../img/background-gllacy-grid-catalog.png');
 	background-size: 1200px auto;
 	height: 1650px;
 }
