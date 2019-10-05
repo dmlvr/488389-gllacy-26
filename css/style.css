@@ -14,7 +14,8 @@ body {
 	background-color: #849d8f;
 }
 img { 
-	max-width: 100% 
+	max-width: 100%;
+	height: auto;
 }
 a { 
 	text-decoration: none 
@@ -33,6 +34,7 @@ a {
 }
 .flex {
 	display: flex;
+	flex-wrap: wrap;
 }
 .button {
 	text-align: center;
@@ -42,31 +44,99 @@ a {
 	color: #ffffff;
 	font-weight: bold;
 }
+.button:hover,
+.button:focus {
+	box-shadow: 0px 2px 2px 0 #ac1000;
+	background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(to top, #e74a35, #f26843);
+}
+.button:active {
+	box-shadow: inset 0px 2px 2px 0 #942718;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)), linear-gradient(to bottom, #e74a35, #f26843);
+}
+.modal {
+	display: none;
+	position: absolute;
+	top: 35px;
+	left: -5px;
+	box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
+  background-color: #f8f7f4;
+  border-radius: 5px;
+  z-index: 1;
+}
 /*Хедер*/
-header {
+.page-header {
 	padding-top: 5px;
 	position: relative;
 }
-nav ul {
-	width: 350px;
+.page-navigation>ul {
+	width: 375px;
 	justify-content: space-between;
 	padding-left: 0;
-	margin-left: 24px;
+	margin-left: 11px;
 	margin-top: 24px;
 }
-nav li {
+.page-navigation li {
 	list-style-type: none;
+	position: relative;
 }
-nav a {
+.page-navigation>ul>li>a {
 	font-size: 16px;
 	font-weight: bold;
 	color: white;
+	padding: 9px 13px 10px 14px;
 }
-nav img {
+.page-navigation>ul>li>a:hover,
+.page-navigation>ul>li>a:focus {
+	background-color: #f7f6f3;
+	border-radius: 20px;
+	color: #333333;
+}
+.page-navigation img {
 	margin-top: 5px;
 }
-nav .submenu {
-	display: none;
+.page-navigation li:first-child:hover .modal {
+	display: flex;
+}
+.page-navigation .submenu {
+	padding-left: 0;
+	flex-direction: column;
+	padding: 8px 0;
+}
+.submenu li {
+	list-style-type: none;
+	display: flex;
+}
+.submenu li:first-child a {
+	font-weight: bold;
+	padding-bottom: 10px;
+	position: relative;
+}
+.submenu li:first-child a::after {
+	content: "";
+	display: flex;
+	width: 128px;
+	height: 1px;
+	background-color: rgba(0,0,0,0.2);
+	position: absolute;
+	top: 34px;
+	left: 7px;
+}
+.submenu a {
+	width: 100%;
+	color: #323232;
+	font-weight: normal;
+	font-size: 14px;
+	padding: 8px 21px;
+}
+.submenu a:hover,
+.submenu a:focus {
+	background-color: #fbded7;
+}
+.submenu a:active {
+	background-color: #f6b5a5;
+}
+.submenu .active {
+	background-color: #d07058;
 }
 .interaction-header {
 	margin-top: 17px;
@@ -79,10 +149,27 @@ nav .submenu {
 	font-size: 14px;
 	align-items: center;
 }
+.search-container {
+	position: relative;
+	height: 17px;
+}
 .search-container button {
 	width: 33px;
  	height: 33px;
  	border-radius: 50%;
+}
+.search-container svg {
+	fill: #ffffff;
+}
+.search-container button:hover {
+	background-color: #ffffff;
+	cursor: pointer;
+}
+.search-container button:hover svg {
+	fill: #000000;
+}
+.search-container:hover .modal {
+	display: flex;
 }
 .input button {
 	width: 93px;
@@ -105,12 +192,6 @@ nav .submenu {
 	margin-left: 8px;
 	margin-right: 8px;
 }
-.input form {
-	display: none;
-}
-.search-container form {
-	display: none;
-}
 .working-time-phone {
 	font-weight: bold;
 	color: white;
@@ -129,7 +210,7 @@ nav .submenu {
 }
 .interaction-header button p {
 	color: white;
-	/*width: 14px;*/
+	margin: 0 0;
 }
 /*Слайдер с мороженным на главной*/
 .slider {
