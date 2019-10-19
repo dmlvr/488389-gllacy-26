@@ -3,11 +3,10 @@
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
-  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/style.min.css">
 	<title>Каталог товаров магазин глейси</title>
 </head>
 <body class="no-slider">
-  <!-- <div class="temporarily-for-grid catalog-html"></div> -->
   <header class="flex container page-header">
       <nav class="flex page-navigation">
         <a href="/">
@@ -30,6 +29,7 @@
         </ul>
       </nav>
       <section class="interaction-header flex">
+        <h2 class="visually-hidden">Поиск, вход и корзина интернет-магазина Глейси</h2>
         <div class="search-container">
           <button class="search" type="button">
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17px"
@@ -49,7 +49,7 @@
         </div>
         <div class="input">
           <button class="flex" type="button">
-            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
             width="21px" height="19px" viewBox="0 0 21 19" enable-background="new 0 0 21 19" xml:space="preserve">
               <g>
                 <polygon points="6,14.875 12.917,9.5 6,4.125 6,7.042 -0.042,7.042 -0.042,11.959 6,11.959   "/>
@@ -57,7 +57,7 @@
                 />
               </g>
             </svg>
-            <p>Вход</p>
+            <span>Вход</span>
           </button>
           <div class="modal">
             <form method="get" action="https://echo.htmlacademy.ru">
@@ -83,8 +83,15 @@
         </div>
         <div class="cart cart-active">
           <button class="flex" type="button">
-            <img src="img/cart-empty-active.svg">
-            <p>2 товара</p>
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            width="21px" height="20px" viewBox="0 0 21 20" enable-background="new 0 0 21 20" xml:space="preserve">
+              <polygon fill="#E84D37" points="5.888,4.031 6.922,13 17.372,13 18.548,4.031 "/>
+              <circle fill="#343434" cx="6.984" cy="18" r="2"/>
+              <circle fill="#343434" cx="15.984" cy="18" r="2"/>
+              <path fill="#343434" d="M5.657,2.031L5.422,0H0v2h3.64l1.5,13h13.988l1.699-12.969H5.657z M17.372,13H6.922L5.888,4.031h12.66
+              L17.372,13z"/>
+            </svg>
+            <span>2 товара</span>
           </button>
           <div class="modal">
             <div class="cart-content">
@@ -94,7 +101,7 @@
                   <button>
                     <span class="visually-hidden">Удалить товар из корзины</span>
                   </button>
-                  <img src="img/ice-cream1.png" width="33" height="33">
+                  <img src="img/ice-cream1.png" width="33" height="33" alt="Пломбир с апельсиновым джемом">
                   <h3>Пломбир с апельсиновым джемом</h3>
                   <p class="weight-price">1,5 кг х <span>200 руб.</span></p>
                   <p class="final-price">300 руб.</p>
@@ -103,7 +110,7 @@
                   <button>
                     <span class="visually-hidden">Удалить товар из корзины</span>
                   </button>
-                  <img src="img/ice-cream1.png" width="33" height="33">
+                  <img src="img/ice-cream2.png" width="33" height="33" alt="Клубничный пломбир с присыпкой из белого шоколада">
                   <h3>Клубничный пломбир с присыпкой из белого шоколада</h3>
                   <p>1,5 кг х <span>300 руб.</span></p>
                   <p>450 руб.</p>
@@ -116,8 +123,9 @@
         </div>
       </section>
       <section class="working-time-phone">
+        <h2 class="visually-hidden">Время работы и номер телефона</h2>
         <p>С 10 до 20, ежедневно</p>
-        <span class="phone">8 812 450-25-25</span>
+        <a class="phone" href="tel:+78124502525">8 812 450-25-25</a>
       </section>
     </header>
     <main>
@@ -125,7 +133,7 @@
     		<h1>Сливочное мороженое</h1>
     		<ul class="bread-crumbs flex">
     			<li><a href="index.html">Главная</a></li>
-    			<li><a href="#">Каталог</a></li>
+    			<li><a href="">Каталог</a></li>
     			<li><a>Сливочное</a></li>
     		</ul>
       </section>
@@ -134,10 +142,10 @@
   			<form method="get" action="https://echo.htmlacademy.ru">
           <ul class="flex">
             <li>
-              <label for="products-sort">Сортировка:</label>
+              <label>Сортировка:</label>
               <div class="select-wrapper">
                 <span>по популярности</span>
-                <select id="products-sort" name="products-sort">
+                <select name="products-sort">
                   <option>по популярности</option>
                   <option>сначала недорогие</option>
                   <option>сначала дорогие</option>
@@ -146,15 +154,15 @@
               </div>
             </li>
             <li>
-              <label for="product-price">Цена: 100 руб. - 500 руб.</label>
+              <label>Цена: 100 руб. - 500 руб.</label>
               <div class="sort-by-price flex">
-                <img class="img-left" width="20" height="22" src="img/sort-price.svg">
+                <img class="img-left" width="20" height="22" src="img/sort-price.svg" alt="Сортировка продукции по цене">
                 <svg>
                   <line x1="0" y1="0" x2="13px" y2="0"></line>
                   <line x1="13" y1="0" x2="120" y2="0"></line>
                   <line x1="120" y1="0" x2="173" y2="0"></line>
                 </svg>
-                <img class="img-right" width="20" height="22" src="img/sort-price.svg">
+                <img class="img-right" width="20" height="22" src="img/sort-price.svg" alt="Сортировка продукции по цене">
               </div>
             </li>
             <li>
@@ -315,14 +323,15 @@
   			</ul>
   		</section>
       <section class="container pagination">
+      <h2 class="visually-hidden">перемещение между страницами каталога интернет-магазина Глейси</h2>
       <ul class="flex">
-          <li><a href=""><img src="img/paginator-icon.svg"></a></li>
+          <li><a href=""><img src="img/paginator-icon.svg" alt="Назад"></a></li>
           <li class="active"><a>1</a></li>
           <li><a href="">2</a></li>
           <li><a href="">3</a></li>
           <li><a href="">4</a></li>
           <li><a href="">5</a></li>
-          <li><a href=""><img src="img/paginator-icon.svg"></a></li>
+          <li><a href=""><img src="img/paginator-icon.svg" alt="Вперёд"></a></li>
       </ul>
       </section>
   	</main>
@@ -346,7 +355,7 @@
         </li>
         <li>
           <a href="#">
-            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
             width="38px" height="38px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
               <g>
                 <path d="M20.916,16c0,2.728-2.211,4.938-4.938,4.938S11.039,18.728,11.039,16c0-0.394,0.051-0.773,0.138-1.14
@@ -363,7 +372,7 @@
         </li>
         <li>
           <a href="#">
-            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
             width="38px" height="38px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
               <path d="M16,0C7.164,0,0,7.163,0,16s7.164,16,16,16c8.837,0,16-7.164,16-16S24.837,0,16,0z M20.062,9.455h-3.021
               v3.444h3.021v3.445h-3.021v8.61h-3.021v-8.61H11v-3.445h3.021V9.455c0-1.902,1.353-3.445,3.021-3.445h3.021V9.455z"/>
@@ -372,7 +381,7 @@
         </li>
         <li>
           <a href="#">
-            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
             width="38px" height="38px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
               <g>
                 <path d="M16.637,14.495c0.402-0.019,0.719-0.082,0.951-0.188c0.326-0.145,0.54-0.33,0.641-0.559
@@ -399,7 +408,7 @@
         <li><a href="#">Экологические стандарты</a></li>
       </ul>
       <div class="copyright">
-        <a href="https://htmlacademy.ru/"><img src="img/logo-htmlacademy-small.svg" width="108" height="39"></a><br>
+        <a href="https://htmlacademy.ru/"><img src="img/logo-htmlacademy-small.svg" width="108" height="39" alt="Логотип HTML Academy"></a><br>
         <a href="https://htmlacademy.ru">Сделано в HTML Academy © 2019</a>
       </div>
     </footer>
