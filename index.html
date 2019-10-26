@@ -9,8 +9,8 @@
   <body class="slide-image1">
     <header class="flex container page-header">
       <nav class="flex page-navigation">
-       <img src="img/logo.svg" width="154" height="64" alt="Логотип интернет-магазина мороженного Глейси">
-        <ul class="flex">
+        <img src="img/logo.svg" width="154" height="64" alt="Логотип интернет-магазина мороженного Глейси">
+        <ul class="flex ul-reset">
           <li><a href="catalog.html">Каталог</a>
             <div class="modal">
               <ul class="submenu">
@@ -36,6 +36,7 @@
               S2.91,13,6.5,13c1.438,0,2.763-0.473,3.839-1.263l5.205,5.204L16.958,15.527z M6.5,11C4.019,11,2,8.981,2,6.5S4.019,2,6.5,2
               S11,4.019,11,6.5S8.981,11,6.5,11z"/>
             </svg>
+            <span class="visually-hidden">Поиск по сайту</span>
          </button>
           <div class="modal">
             <form method="get" action="https://echo.htmlacademy.ru">
@@ -58,7 +59,7 @@
             <span>Вход</span>
           </button>
           <div class="modal">
-            <form method="get" action="https://echo.htmlacademy.ru">
+            <form method="post" action="https://echo.htmlacademy.ru">
               <ul>
                 <li>
                   <label class="visually-hidden" for="user-login">Логин</label>
@@ -68,7 +69,7 @@
                   <label class="visually-hidden" for="user-password">Пароль</label>
                   <input id="user-password" type="text" name="password" placeholder="********">
                 </li>
-                <li class="flex">
+                <li>
                   <button class="button" type="submit">Войти</button>
                   <p>
                     <a href="">Забыли пароль?</a>
@@ -99,9 +100,9 @@
         <p>С 10 до 20, ежедневно</p>
         <a class="phone" href="tel:+78124502525">8 812 450-25-25</a>
       </section>
-  	</header>
-  	<main>
-  		<h1 class="visually-hidden">Интернет-магазин мороженного Глейси</h1>
+    </header>
+    <main>
+      <h1 class="visually-hidden">Интернет-магазин мороженного Глейси</h1>
       <section class="slider container">
         <h2 class="visually-hidden">Слайдер с мороженным</h2>
         <ul class="slider-content">
@@ -153,38 +154,46 @@
       </section>
       <section class="products hit container">
         <h2 class="visually-hidden">Хиты продукции</h2>
-        <ul class="flex">
+        <ul class="flex ul-reset">
           <li>
-            <h3>Сливочное с апельсиновым<br> джемом и цитрусовой стружкой</h3>
-            <p>310₽<span>/кг</span></p>
-            <img src="img/ice-cream1.png" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
-            <div class="products-button flex">
-              <a href="" class="button">Быстрый просмотр</a>
-            </div>
+            <article>
+              <h3>Сливочное с апельсиновым<br> джемом и цитрусовой стружкой</h3>
+              <p>310₽<span>/кг</span></p>
+              <img src="img/ice-cream1.png" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+              <div class="products-button flex">
+                <a href="" class="button">Быстрый&nbsp;просмотр</a>
+              </div>
+            </article>
           </li>
           <li>
-            <h3>Сливочно-кофейное с кусочками<br>шоколада</h3>
-            <p>380₽<span>/кг</span></p>
-            <img src="img/ice-cream2.png" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
-            <div class="products-button flex">
-              <a href="" class="button">Быстрый просмотр</a>
-            </div>
+            <article>
+              <h3>Сливочно-кофейное с кусочками<br>шоколада</h3>
+              <p>380₽<span>/кг</span></p>
+              <img src="img/ice-cream2.png" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
+              <div class="products-button flex">
+                <a href="" class="button">Быстрый&nbsp;просмотр</a>
+              </div>
+            </article>
           </li>
           <li>
-            <h3>Сливочно-клубничное<br>с присыпкой из белого шоколада</h3>
-            <p>355₽<span>/кг</span></p>
-            <img src="img/ice-cream3.png" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
-            <div class="products-button flex">
-              <a href="" class="button">Быстрый просмотр</a>
-            </div>
+            <article>
+              <h3>Сливочно-клубничное<br>с присыпкой из белого шоколада</h3>
+              <p>355₽<span>/кг</span></p>
+              <img src="img/ice-cream3.png" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
+              <div class="products-button flex">
+                <a href="" class="button">Быстрый&nbsp;просмотр</a>
+              </div>
+            </article>
           </li>
           <li>
-            <h3>Сливочное крем-брюле с<br>карамельной подливкой</h3>
-            <p>415₽<span>/кг</span></p>
-            <img src="img/ice-cream4.png" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
-            <div class="products-button flex">
-              <a href="" class="button">Быстрый просмотр</a>
-            </div>
+            <article>
+              <h3>Сливочное крем-брюле с<br>карамельной подливкой</h3>
+              <p>415₽<span>/кг</span></p>
+              <img src="img/ice-cream4.png" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
+              <div class="products-button flex">
+                <a href="" class="button">Быстрый&nbsp;просмотр</a>
+              </div>
+            </article>
           </li>
         </ul>
       </section>
@@ -200,21 +209,23 @@
       </section>
       <div class="container flex blog-sub">
 	      <section class="blog">
-	        <h2>Новое в нашем блоге</h2>
-	        <a href="#">10 способов сервировки<br>фруктовых щербетов к<br>столу</a>
-	      </section>
-	      <section class="newsletter-subscription">
-	        <div class="newsletter-subscription-box">
-	          <h2 class="visually-hidden">Подписка на рассылку магазина Глейси</h2>
-	          <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) </p>
-	          <form class="flex" method="get" action="https://echo.htmlacademy.ru">
-	            <label class="visually-hidden" for="subscription-email">Адрес электронной почты</label>
-	            <input id="subscription-email" type="text" name="subscription-email" placeholder="Электронная почта">
-	            <button class="button" type="submit">Отправить</button>
-	          </form>
-	        </div>
-	      </section>
-	    </div>
+          <h2>Новое в нашем блоге</h2>
+          <article>
+  	        <a href="#"><h3>10 способов сервировки фруктовых щербетов к столу</h3></a>
+          </article>
+        </section>
+        <section class="newsletter-subscription">
+          <div class="newsletter-subscription-box">
+            <h2 class="visually-hidden">Подписка на рассылку магазина Глейси</h2>
+            <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) </p>
+            <form class="flex" method="post" action="https://echo.htmlacademy.ru">
+              <label class="visually-hidden" for="subscription-email">Адрес электронной почты</label>
+              <input id="subscription-email" type="text" name="subscription-email" placeholder="Электронная почта">
+              <button class="button" type="submit">Отправить</button>
+            </form>
+          </div>
+        </section>
+      </div>
       <section class="contacts flex">
         <h2 class="visually-hidden">Адрес магазина Глейси</h2>
         <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A201abdf03007d013c9e5ae6dbac48c08cd50bf409018a210d011035e326d8fa8&amp;source=constructor"></iframe>
@@ -224,13 +235,13 @@
           <p>ул. Большая Конюшенная<br>19/8, Санкт-Петербург</p>
          	<p class="small">Для заказов по телеону:</p>
          	<a href="tel:+78124502525">8 812 450-25-25</a>
-          <p class="small">(с 10 до 20 ежедневно)</p><br>
-          <button class="popup-link button">Форма обратной связи</button>
+          <p class="small">(с 10 до 20 ежедневно)</p>
+          <a class="popup-link button" href="feedback.html">Форма&nbsp;обратной&nbsp;связи</a>
         </div>
       </section>
-  	</main>
-  	<footer class="container flex page-footer">
-            <ul class="social-network flex">
+    </main>
+    <footer class="container flex page-footer">
+      <ul class="social-network flex">
         <li>
           <a href="#">
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="38px"
@@ -245,6 +256,7 @@
                 c-0.004,0.833-0.569,1.463-0.935,1.709c0.747,0.165,1.423-0.475,1.423-0.475C25.467,11.818,24.557,12.58,23.944,12.809z"/>
               </g>
             </svg>
+            <span class="visually-hidden">Twitter</span>
           </a>
         </li>
         <li>
@@ -262,6 +274,7 @@
                 h11.396c1.254,0,2.279,1.026,2.279,2.279V21.698z"/>
               </g>
             </svg>
+            <span class="visually-hidden">instagram</span>
           </a>
         </li>
         <li>
@@ -271,6 +284,7 @@
               <path d="M16,0C7.164,0,0,7.163,0,16s7.164,16,16,16c8.837,0,16-7.164,16-16S24.837,0,16,0z M20.062,9.455h-3.021
               v3.444h3.021v3.445h-3.021v8.61h-3.021v-8.61H11v-3.445h3.021V9.455c0-1.902,1.353-3.445,3.021-3.445h3.021V9.455z"/>
             </svg>
+            <span class="visually-hidden">Facebook</span>
           </a>
         </li>
         <li>
@@ -292,6 +306,7 @@
                 c0.917,0.182,1.642,0.559,2.179,1.13c0.537,0.571,0.807,1.325,0.807,2.261C23.013,19.392,22.875,19.997,22.602,20.531z"/>
               </g>
             </svg>
+            <span class="visually-hidden">ВКонтакте</span>
           </a>
         </li>
       </ul>
@@ -301,8 +316,8 @@
         <li><a href="#">О производстве</a></li>
         <li><a href="#">Экологические стандарты</a></li>
       </ul>
-      <div class="copyright">
-        <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy-small.svg" width="108" height="39" alt="Логотип HTML Academy"></a><br>
+      <div class="copyright flex">
+        <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy-small.svg" width="108" height="39" alt="Логотип HTML Academy"></a>
         <a href="https://htmlacademy.ru/intensive/htmlcss">Сделано в HTML Academy © 2019</a>
       </div>
   	</footer>
