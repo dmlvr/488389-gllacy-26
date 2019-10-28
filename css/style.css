@@ -10,7 +10,7 @@ html {
 }
 body {
 	margin: 0;
-	font-family: "Roboto", Arial, sans-serif;
+	font-family: "Roboto", "Arial", sans-serif;
 	
 }
 .no-slider {
@@ -22,6 +22,19 @@ img {
 }
 a {
 	text-decoration: none 
+}
+.link-underline a>span,
+.link-underline h3>a {
+	border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+.link-underline a>span:hover {
+	border-bottom: none;
+}
+.link-underline-hover a:hover span {
+	border-bottom: 1px solid rgba(232,77,55,0.2);
+}
+.link-underline h3>a::after {
+	content: "";
 }
 .visually-hidden {
 	position: absolute;
@@ -98,7 +111,7 @@ a {
 	position: relative;
 }
 .page-navigation ul {
-	min-width: 380px;
+	min-width: 378px;
 	justify-content: space-between;
 	padding-left: 0;
 	margin-left: 9px;
@@ -112,7 +125,6 @@ a {
 	font-weight: bold;
 	color: #ffffff;
 	padding: 9px 13px 10px 14px;
-	text-decoration: underline;
 }
 .page-navigation a:hover,
 .page-navigation a:focus {
@@ -133,6 +145,9 @@ a {
 	box-shadow: inset 0px 2px 1px 0 #696969;
   background-color: #ededed;
 }
+.page-navigation .logo-link:active {
+	box-shadow: none;
+}
 .page-navigation img {
 	margin-top: 5px;
 }
@@ -140,6 +155,9 @@ a {
 	border-radius: 20px;
 	background-color: #d07058;
 	text-decoration: none;
+}
+.page-navigation .menu-active>span {
+	border-bottom: none;
 }
 .page-navigation li:first-child:hover .modal {
 	display: flex;
@@ -522,7 +540,7 @@ a {
 }
 .slider-content li {
 	flex-direction: column;
-	min-height: 570px;
+	min-height: 573px;
 }
 .slider-content li {
 	display: none;
@@ -545,8 +563,8 @@ a {
 	margin-bottom: 37px;
 	padding-top: 15px;
 	padding-bottom: 15px;
-	border-radius: 25px; 
-	font-size: 30px;
+	border-radius: 32px; 
+	font-size: 32px;
 	width: 280px;
 }
 .slider-browsing {
@@ -611,7 +629,7 @@ a {
 	padding-left: 0;
 	margin-top: 0;
 	justify-content: space-between;
-	margin-bottom: 35px;
+	margin-bottom: 34px;
 }
 .special-offers li {
 	width: 560px;
@@ -633,12 +651,12 @@ a {
 	color: #ffffff;
 	font-weight: bold;
 	margin-top: 17px;
-	margin-bottom: 43px;
+	margin-bottom: 45px;
 }
 .special-offers button {
 	font-size: 18px;
 	padding: 12px 24px 12px 24px;
-	border-radius: 20px;
+	border-radius: 25px;
 	line-height: 1.33;
 	align-self: flex-end;
 }
@@ -833,9 +851,6 @@ a {
 .filters input[type="radio"]:focus + label:before {
 	opacity: 1;
 }
-.filters input[type="radio"]:disabled + label:before {
-	opacity: 0.4;
-}
 .filters input[type="radio"] + label:after {
 	content: "";
 	position: absolute;
@@ -849,8 +864,14 @@ a {
 	opacity: 0;
 	transition: .2s;
 }
+.filters input[type="radio"]:disabled + label:after {
+	opacity: 0.4;
+}
+.filters input[type="radio"]:disabled + label:before {
+	opacity: 0.4;
+}
 .filters input[type="radio"]:checked + label:after {
-	opacity: 1;
+	opacity: 0.8;
 }
 .filters input[type="radio"]:checked + label:before {
 	opacity: 0;
@@ -906,13 +927,17 @@ a {
 .filters input[type="checkbox"]:checked + label:before {
 	opacity: 0;
 }
+.filters input[type="checkbox"]:checked:disabled + label:after {
+	opacity: 0.4;
+}
 /*Продукция*/
 .products ul {
-	margin-top: 32px;
+	margin-top: 30px;
 	padding-left: 0;
 	flex-wrap: wrap;
 	width: 1180px;
 	margin-left: -12px;
+	margin-bottom: 23px;
 }
 .products article {
 	width: 293px;
@@ -939,11 +964,6 @@ a {
 .catalog article {
 	margin-bottom: 19px;
 }
-.catalog h3 {
-	max-width: 255px;
-	min-height: 2.8em;
-	max-width: 260px;
-}
 .products h3 {
 	font-weight: 500;
 	color: #ffffff;
@@ -952,6 +972,11 @@ a {
 	margin-top: 21px;
 	line-height: 1.38;
 	order: 1;
+	min-height: 2.8em;
+	max-width: 260px;
+}
+.products a {
+	color: #ffffff;
 }
 .products p {
 	font-size: 45px;
@@ -963,6 +988,7 @@ a {
 	z-index: 1;
 	align-self: flex-start;
 	order: 1;
+	letter-spacing: 1px;
 }
 .products img {
 	order: 1;
@@ -1058,7 +1084,7 @@ a {
 /*Описание магазина*/
 .shop-description {
 	border-radius: 15px;
-	padding: 29px 17px 4px 21px;
+	padding: 24px 17px 2px 21px;
 	background-color: #eee2c8;
 	background-image: url("../img/background-seo.jpg");
 }
@@ -1068,18 +1094,20 @@ a {
 	font-weight: 500;
 	margin-top: 0;
 	line-height: 1.25; 
+	margin-bottom: 21px;
 }
 .shop-description ul {
 	padding-left: 56px;
 	flex-wrap: wrap;
 	justify-content: space-between;
+	margin: 0;
 }
 .shop-description li {
 	list-style-type: none;
 	font-size: 16px;
 	color: #323232;
-	width: 485px;
-	margin-bottom: 21px; 
+	max-width: 487px;
+	margin-bottom: 22px; 
 	line-height: 1.38;
 	position: relative;
 }
@@ -1110,7 +1138,7 @@ a {
 }
 .blog-sub section {
 	width: 560px;
-	margin-top: 26px;
+	margin-top: 41px;
 }
 /*Блог*/
 .blog {
@@ -1118,12 +1146,12 @@ a {
 	background-color: #ffffff;
 	background-image: url("../img/background-strawerry.jpg");
 	background-repeat: no-repeat;
-	background-position: 205px -43px;
-	padding: 26px 20px 84px 20px;
+	background-position: 205px -37px;
+	padding: 25px 20px 82px 20px;
 }
 .blog h2 {
 	font-size: 16px;
-	margin: 0 0 7px 0;
+	margin: 0 0 5px 0;
 }
 .blog a {
 	max-width: 285px;
@@ -1148,11 +1176,11 @@ a {
 .newsletter-subscription-box {
 	border-radius: 10px;
 	background-color: #ffffff;
-	padding: 31px 21px 39px 21px;
+	padding: 28px 21px 35px 21px;
 }
 .newsletter-subscription p {
 	margin-top: 0;
-	margin-bottom: 36px;
+	margin-bottom: 35px;
 	font-size: 16px;
 	font-weight: normal;
 	color: #5a5a5a;
@@ -1162,6 +1190,7 @@ a {
 	margin-left: auto;
 	border-radius: 25px;
 	width: 129px;
+	font-size: 18px;
 }
 .newsletter-subscription input {
 	width: 368px;
@@ -1283,7 +1312,6 @@ a {
 	font-size: 13px;
 	font-weight: normal;
 	color: #ffffff;
-	text-decoration: underline;
 }
 .footer-menu a:hover,
 .footer-menu a:active {
@@ -1296,6 +1324,11 @@ a {
 }
 .copyright img {
 	position: relative;
+	left: 2px;
+}
+.copyright a:first-child {
+	margin-bottom: 5px;
+	height: 39px;
 }
 .copyright a {
 	font-size: 12px;
@@ -1427,21 +1460,24 @@ a {
 	transform: rotate(-45deg);
 }
 /*Временные стили для сетки*/
-.temporarily-for-grid {
+/*.temporarily-for-grid {
 	background-repeat: no-repeat;
 	position: absolute;
 	width: 100%;
 	background-position: top center;
 	z-index: -1;
+	opacity: 0.7;
 }
 .index-html {
 	background-image: url("../img/background-gllacy-grid.png");
-	background-size: 1146px auto;
+	background-size: 1200px auto;
 	height: 2416px;
 }
 .catalog-html {
 	background-image: url("../img/background-gllacy-grid-catalog.png");
 	background-size: 1200px auto;
 	height: 1650px;
-	opacity: 0.8;
 }
+header, body, footer {
+	opacity: 0.5;
+}*/
