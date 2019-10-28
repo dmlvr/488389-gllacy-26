@@ -835,7 +835,7 @@ a {
 	padding: 0 0 0 35px;
 	cursor: pointer;
 }
-.filters input[type="radio"] + label:before {
+.filters input[type="radio"] + label::before {
 	content: "";
 	position: absolute;
 	top: 0;
@@ -847,11 +847,11 @@ a {
 	background-repeat: no-repeat;
 	opacity: 0.8;
 }
-.filters input[type="radio"]:hover + label:before,
-.filters input[type="radio"]:focus + label:before {
+.filters input[type="radio"]:hover + label::before,
+.filters input[type="radio"]:focus + label::before {
 	opacity: 1;
 }
-.filters input[type="radio"] + label:after {
+.filters input[type="radio"] + label::after {
 	content: "";
 	position: absolute;
 	top: 0;
@@ -864,16 +864,16 @@ a {
 	opacity: 0;
 	transition: .2s;
 }
-.filters input[type="radio"]:disabled + label:after {
+.filters input[type="radio"]:disabled + label::after {
 	opacity: 0.4;
 }
-.filters input[type="radio"]:disabled + label:before {
+.filters input[type="radio"]:disabled + label::before {
 	opacity: 0.4;
 }
-.filters input[type="radio"]:checked + label:after {
+.filters input[type="radio"]:checked + label::after {
 	opacity: 0.8;
 }
-.filters input[type="radio"]:checked + label:before {
+.filters input[type="radio"]:checked + label::before {
 	opacity: 0;
 }
 .filters input[type="checkbox"] {
@@ -889,7 +889,7 @@ a {
 	padding: 0 0 0 35px;
 	cursor: pointer;
 }
-.filters input[type="checkbox"] + label:before {
+.filters input[type="checkbox"] + label::before {
 	content: "";
 	position: absolute;
 	top: 0;
@@ -901,14 +901,14 @@ a {
 	background-repeat: no-repeat;
 	opacity: 0.8;
 }
-.filters input[type="checkbox"]:hover + label:before,
-.filters input[type="checkbox"]:focus + label:before {
+.filters input[type="checkbox"]:hover + label::before,
+.filters input[type="checkbox"]:focus + label::before {
 	opacity: 1;
 }
-.filters input[type="checkbox"]:disabled + label:before {
+.filters input[type="checkbox"]:disabled + label::before {
 	opacity: 0.4;
 }
-.filters input[type="checkbox"] + label:after {
+.filters input[type="checkbox"] + label::after {
 	content: "";
 	position: absolute;
 	top: 0;
@@ -921,13 +921,13 @@ a {
 	opacity: 0;
 	transition: .2s;
 }
-.filters input[type="checkbox"]:checked + label:after {
+.filters input[type="checkbox"]:checked + label::after {
 	opacity: 1;
 }
-.filters input[type="checkbox"]:checked + label:before {
+.filters input[type="checkbox"]:checked + label::before {
 	opacity: 0;
 }
-.filters input[type="checkbox"]:checked:disabled + label:after {
+.filters input[type="checkbox"]:checked:disabled + label::after {
 	opacity: 0.4;
 }
 /*Продукция*/
