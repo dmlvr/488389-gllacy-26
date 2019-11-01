@@ -563,8 +563,8 @@ a {
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 37px;
-	padding-top: 15px;
-	padding-bottom: 15px;
+	padding-top: 14px;
+	padding-bottom: 14px;
 	border-radius: 32px; 
 	font-size: 32px;
 	width: 280px;
@@ -578,7 +578,7 @@ a {
 	height: 21px;
 	border-radius: 50%;
 	background-color: rgba(255,255,255,0.0);
-	border: 2px solid rgba(255,255,255,0.5);
+	border: 2px solid rgb(255,255,255);
 	margin-right: 8px;
 }
 .slider-browsing button:hover {
@@ -625,19 +625,20 @@ a {
 	line-height: 1.17;
 	color: #ffffff;
 	margin-top: 0;
+	margin-bottom: 26px;
 }
 /*Специальные предложения*/
 .special-offers ul {
 	padding-left: 0;
 	margin-top: 0;
 	justify-content: space-between;
-	margin-bottom: 34px;
+	margin-bottom: 35px;
 }
 .special-offers li {
 	width: 560px;
 	list-style-type: none;
 	border-radius: 15px;
-	padding: 15px 20px 23px 18px;
+	padding: 15px 20px 24px 18px;
 	justify-content: flex-end;
 }
 .special-offers h3 {
@@ -652,12 +653,12 @@ a {
 	font-size: 18px;
 	color: #ffffff;
 	font-weight: bold;
-	margin-top: 17px;
-	margin-bottom: 45px;
+	margin-top: 18px;
+	margin-bottom: 47px;
 }
 .special-offers button {
 	font-size: 18px;
-	padding: 12px 24px 12px 24px;
+	padding: 11px 22px 11px 23px;
 	border-radius: 25px;
 	line-height: 1.33;
 	align-self: flex-end;
@@ -690,10 +691,10 @@ a {
 }
 .filters li:nth-child(4) {
 	margin-left: 0;
-	margin-top: 9px;
+	margin-top: 14px;
 }
 .filters li button {
-	margin-top: 34px;
+	margin-top: 37px;
 	border: 2px solid rgba(255,255,255,0.8);
 	background-color: rgba(255,255,255,0.2);
 	color: #ffffff;
@@ -719,11 +720,10 @@ a {
 }
 .filters select {
 	opacity: 0;
-	padding: 9px 10px 9px 12px;
+	padding: 9px 10px 5px 12px;
 }
 .select-wrapper {
 	width: 194px;
-	position: relative;
 	background: rgba(255,255,255,0.2);
 	font-size: 16px;
 	color: #ffffff;
@@ -934,15 +934,14 @@ a {
 }
 /*Продукция*/
 .products ul {
-	margin-top: 30px;
 	padding-left: 0;
 	flex-wrap: wrap;
 	width: 1180px;
 	margin-left: -12px;
-	margin-bottom: 23px;
+	margin-bottom: 20px;
 }
 .catalog ul {
-	margin-top: 35px;
+	margin-top: 33px;
 }
 .products article {
 	width: 293px;
@@ -964,14 +963,14 @@ a {
 	left: 11px;
 }
 .catalog article {
-	margin-bottom: 19px;
+	margin-bottom: 15px;
 }
 .products h3 {
 	font-weight: 500;
 	color: #ffffff;
 	font-size: 16px;
 	text-align: center;
-	margin-top: 21px;
+	margin-top: 24px;
 	line-height: 1.38;
 	order: 1;
 	min-height: 2.8em;
@@ -1041,8 +1040,8 @@ a {
 .pagination ul {
 	padding-left: 0;
 	justify-content: flex-end;
-	margin-top: 48px;
-	margin-bottom: 33px;
+	margin-top: 53px;
+	margin-bottom: 37px;
 }
 .pagination li {
 	font-size: 16px;
@@ -1087,7 +1086,7 @@ a {
 /*Описание магазина*/
 .shop-description {
 	border-radius: 15px;
-	padding: 24px 17px 2px 21px;
+	padding: 23px 17px 3px 21px;
 	background-color: #eee2c8;
 	background-image: url("../img/background-seo.jpg");
 }
@@ -1095,9 +1094,9 @@ a {
 	font-size: 24px;
 	color: #323232;
 	font-weight: 500;
-	margin-top: 0;
+	margin-top: 2px;
 	line-height: 1.25; 
-	margin-bottom: 21px;
+	margin-bottom: 19px;
 }
 .shop-description ul {
 	padding-left: 56px;
@@ -1141,7 +1140,7 @@ a {
 }
 .blog-sub section {
 	width: 560px;
-	margin-top: 40px;
+	margin-top: 41px;
 }
 /*Блог*/
 .blog {
@@ -1184,7 +1183,7 @@ a {
 .newsletter-subscription-box {
 	border-radius: 10px;
 	background-color: #ffffff;
-	padding: 28px 21px 35px 21px;
+	padding: 30px 21px 35px 21px;
 }
 .newsletter-subscription p {
 	margin-top: 0;
@@ -1245,18 +1244,22 @@ a {
 	font-weight: bold;
 	color: #323232;
 	margin-top: 0;
-	margin-bottom: 15px;
+	margin-bottom: 17px;
 	line-height: 1.4;
 }
 .contacts .small {
 	font-size: 14px;
 	font-weight: normal;
-	margin-bottom: 3px;
+	margin-bottom: 5px;
+}
+.contacts-info .small:first-child  {
+	margin-bottom: 1px;
+	line-height: 1.43;
 }
 .contacts .popup-link {
-	padding: 10px 28px 11px 28px;
+	padding: 10px 28px 10px 28px;
 	border-radius: 25px;
-	margin-top: 26px;
+	margin-top: 25px;
 	color: #ffffff;
 	display: flex;
 	text-align: center;
