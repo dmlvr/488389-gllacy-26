@@ -33,9 +33,6 @@ a {
 .link-underline-hover a:hover span {
 	border-bottom: 1px solid rgba(232,77,55,0.2);
 }
-.link-underline h3>a::after {
-	content: "";
-}
 .visually-hidden {
 	position: absolute;
 	clip: rect(0 0 0 0);
@@ -99,6 +96,11 @@ a {
 	color: #999999;
 	font-weight: normal;
 }
+.modal form,
+.modal .cart-content {
+	border-radius: 5px;
+	box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
+}
 .ul-reset {
 	padding-left: 0;
 }
@@ -143,7 +145,7 @@ a {
 }
 .page-navigation a:active {
 	box-shadow: inset 0px 2px 1px 0 #696969;
-  background-color: #ededed;
+	background-color: #ededed;
 }
 .page-navigation .logo-link:active {
 	box-shadow: none;
@@ -939,6 +941,9 @@ a {
 	margin-left: -12px;
 	margin-bottom: 23px;
 }
+.catalog ul {
+	margin-top: 35px;
+}
 .products article {
 	width: 293px;
 	display: flex;
@@ -947,9 +952,6 @@ a {
 	justify-content: flex-end;
 	position: relative;
 	padding-top: 6px;
-}
-.hit article {
-	position: relative;
 }
 .hit article::after {
 	content: "";
@@ -1002,6 +1004,7 @@ a {
 	position: relative;
 	justify-content: center;
 	order: 0;
+	word-spacing: 1px;
 }
 .products-button a {
 	display: none;
@@ -1038,7 +1041,7 @@ a {
 .pagination ul {
 	padding-left: 0;
 	justify-content: flex-end;
-	margin-top: 50px;
+	margin-top: 48px;
 	margin-bottom: 33px;
 }
 .pagination li {
@@ -1117,7 +1120,7 @@ a {
 	height: 49px;
 	background-size: cover;
 	position: absolute;
-	top: -14px;
+	top: -11px;
 	left: -57px;
 }
 .shop-description li:nth-child(1)::after {
@@ -1138,7 +1141,7 @@ a {
 }
 .blog-sub section {
 	width: 560px;
-	margin-top: 41px;
+	margin-top: 40px;
 }
 /*Блог*/
 .blog {
@@ -1152,17 +1155,22 @@ a {
 .blog h2 {
 	font-size: 16px;
 	margin: 0 0 5px 0;
+	font-weight: normal;
 }
 .blog a {
-	max-width: 285px;
-	display: flex;
-}
-.blog h3 {
-	text-decoration: underline;
 	color: #323232;
 	font-size: 24px;
 	line-height: 1.25;
 	font-weight: bold;
+	background-image: linear-gradient(to right, #323232 50%, #323232 50%);
+	background-position: 0 1.04em;
+	background-repeat: repeat-x;
+	background-size: 1px 2px;
+}
+.blog article {
+	max-width: 285px;
+}
+.blog h3 {
 	margin: 0;
 }
 /*Подписка на новости*/
@@ -1206,24 +1214,26 @@ a {
 }
 /*Контактная информация*/
 .contacts {
-	background-image: url("../img/map.png");
-	margin-top: 38px;
+	margin-top: 40px;
 	position: relative;
-	width: 1200px;
-	margin-left: auto;
-	margin-right: auto; 
+	width: 100%;
 }
 .contacts iframe {
 	width: 100%;
 	min-height: 430px;
 	border: 0;
-}
-.contacts div {
 	position: absolute;
-	top: 63px;
-	right: 27px;
+	top: 0;
+	left: 0;
 }
-.contacts div {
+.contacts-box {
+	min-height: 430px;
+	position: relative;
+}
+.contacts-info {
+	position: absolute;
+	right: 0;
+	top: 63px;
 	width: 302px;
 	background-color: #ffffff;
 	border-radius: 10px;
@@ -1235,6 +1245,7 @@ a {
 	font-weight: bold;
 	color: #323232;
 	margin-top: 0;
+	margin-bottom: 15px;
 	line-height: 1.4;
 }
 .contacts .small {
@@ -1243,9 +1254,9 @@ a {
 	margin-bottom: 3px;
 }
 .contacts .popup-link {
-	padding: 13px 28px 13px 28px;
+	padding: 10px 28px 11px 28px;
 	border-radius: 25px;
-	margin-top: 22px;
+	margin-top: 26px;
 	color: #ffffff;
 	display: flex;
 	text-align: center;
@@ -1283,6 +1294,7 @@ a {
 	fill: rgba(255,255,255,0.7);
 }
 .footer-menu {
+	margin-top: 14px;
 	margin-left: 235px;
 	width: 306px;
 	flex-wrap: wrap;
@@ -1300,7 +1312,7 @@ a {
 	background-repeat: no-repeat;
 	position: absolute;
 	left: -22px;
-	top: 3px;
+	top: 2px;
 }
 .footer-menu li:nth-child(2) {
 	margin-left: 30px; 
@@ -1325,9 +1337,10 @@ a {
 .copyright img {
 	position: relative;
 	left: 2px;
+	top: -2px;
 }
 .copyright a:first-child {
-	margin-bottom: 5px;
+	margin-bottom: 3px;
 	height: 39px;
 }
 .copyright a {
@@ -1371,7 +1384,7 @@ a {
 .popup ul {
 	padding-left: 0;
 	margin: 0;
-}
+} 
 .popup li {
 	list-style-type: none;
 	padding-top: 20px;
@@ -1459,25 +1472,3 @@ a {
 .popup-close::after {
 	transform: rotate(-45deg);
 }
-/*Временные стили для сетки*/
-/*.temporarily-for-grid {
-	background-repeat: no-repeat;
-	position: absolute;
-	width: 100%;
-	background-position: top center;
-	z-index: -1;
-	opacity: 0.7;
-}
-.index-html {
-	background-image: url("../img/background-gllacy-grid.png");
-	background-size: 1200px auto;
-	height: 2416px;
-}
-.catalog-html {
-	background-image: url("../img/background-gllacy-grid-catalog.png");
-	background-size: 1200px auto;
-	height: 1650px;
-}
-header, body, footer {
-	opacity: 0.5;
-}*/
